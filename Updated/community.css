@@ -1,0 +1,249 @@
+/* Base Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    font-family: 'Graduate';
+    position: relative;
+    background-image: url("header.jpeg");
+    background-size: cover;
+    background-color: #a3d183;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.372);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 50% opacity */
+    z-index: 1;
+}
+
+header h1,
+nav {
+    position: relative;
+    z-index: 2;
+    /* Keeps the text above the overlay */
+}
+
+header h1 {
+    font-family: 'Averia Serif Libre';
+    margin: 0;
+    font-size: 2.5em;
+    animation: bounceIn 1.5s ease;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 2s ease-in;
+}
+
+nav ul li {
+    font-family: 'Playfair Display';
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+/* Carousel container */
+.carousel-container {
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Carousel slide */
+.carousel slide {
+    display: none;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+}
+
+#eventsCarousel {
+    animation: fadeIn 2s ease-in;
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #ffe4b5;
+    /* Matches the event section's background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Navigation buttons*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    transition: 0.6s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent buttons */
+}
+
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*THIS*/
+.carousel-caption1 {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #29211b;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Adds a semi-transparent background */
+    padding: 20px;
+    width: 100%;
+    animation: fadeIn 2s ease-in;
+}
+
+.carousel-inner img {
+    width: 100%;
+    /* Ensures images take full width */
+    height: auto;
+    /* Adjust height accordingly */
+    border-radius: 10px;
+}
+
+.carousel-indicators li {
+    list-style-type: none;
+    /* Ensure no list styling is applied */
+}
+
+/* Adjust the height of the carousel */
+.carousel-item {
+    font-family: 'Playfair Display', serif;
+    animation: fadeIn 2s ease-in;
+    height: 500px;
+}
+
+.carousel-front h1{
+    font-family: 'Abril Fatface', serif;
+    font-size: 6rem;
+    display: flex;
+    animation: fadeIn 2s ease-in;
+    height: 500px;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 1.0;
+    /* Set opacity for the background image */
+}
+
+/* Responsive text size for captions */
+.carousel-caption1 h3 {
+    font-family: 'Cutive';
+    font-size: 2rem;
+}
+
+.carousel-caption1 p {
+    font-size: 1.7rem;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption1 h3 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption1 p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Footer */
+footer {
+    font-family: 'Playfair Display', serif;
+    background-color: #f78ca0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

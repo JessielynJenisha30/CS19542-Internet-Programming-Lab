@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore & Library</title>
+    <link rel="stylesheet" href="lib_style.css">
+    <script defer src="bookstore.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to The Story - Bookstore & Library</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cafe.html">Cafe</a></li>
+                <li><a href="florist.html">Floral Shop</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <section id="search">
+        <h2>Find Your Favorite Book</h2>
+        <input type="text" id="searchInput" placeholder="Search by title or author..." onkeyup="filterBooks()">
+    </section>
+
+    <!-- Book Display Section -->
+    <section id="bookstore">
+        <h2>Our Collection</h2>
+        <div class="book-grid" id="bookGrid">
+            <div class="book" data-title="A Voice in The Wind" data-author="Francine Rivers">
+                <img src="C:\Users\Jessielyn Jenisha\Documents\Sem 5\Internet Programming\PROJECT\Updated\a-voice-in-the-wind.jpg" alt="A Voice In The Wind">
+                <h3>A Voice in The Wind</h3>
+                <p>by Francine Rivers</p>
+            </div>
+            <div class="book" data-title="An Ech In The Darkness" data-author="Francine Rivers">
+                <img src="C:\Users\Jessielyn Jenisha\Documents\Sem 5\Internet Programming\PROJECT\Updated\An echo in the darkness.jpg" alt="An Ech In The Darkness">
+                <h3>An Ech In The Darkness</h3>
+                <p>by Francine Rivers</p>
+            </div>
+            <div class="book" data-title="To Kill a Mockingbird" data-author="Harper Lee">
+                <img src="images/mockingbird.jpg" alt="To Kill a Mockingbird">
+                <h3>To Kill a Mockingbird</h3>
+                <p>by Harper Lee</p>
+            </div>
+            <div class="book" data-title="Pride and Prejudice" data-author="Jane Austen">
+                <img src="images/pride.jpg" alt="Pride and Prejudice">
+                <h3>Pride and Prejudice</h3>
+                <p>by Jane Austen</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Story - Bookstore & Library</p>
+    </footer>
+</body>
+</html>

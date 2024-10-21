@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE STORY BEHIND</title>
+    <link rel="stylesheet" href="cafe_style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia Serif Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril Fatface">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1><b>THE STORY BEHIND</b></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="library.html">LIBRARY</a></li>
+                <li><a href="florist.html">FLORAL SHOP</a></li>
+                <li><a href="Comm.html">COMMUNITY</a></li>
+                <li><a href="index.html#eventsCarousel">EVENTS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Events Section -->
+    <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#eventsCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#eventsCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#eventsCarousel" data-bs-slide-to="2"></li>
+            <li data-bs-target="#eventsCarousel" data-bs-slide-to="3"></li>
+            <li data-bs-target="#eventsCarousel" data-bs-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <!-- New Slide for Upcoming Events -->
+            <div class="carousel-item active">
+                <div class="carousel-front">
+                    <h1>Our Menu >></h1>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <a href="Coffee & Tea.php">
+                    <video autoplay muted loop style="cursor: pointer;">
+                        <source src="Coffee and tea.mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption1">
+                        <h1>COFFEE & TEA</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="carousel-item">
+                <a href="Juice & Mocktails.php">
+                    <video autoplay muted loop>
+                        <source src="Juice and Mocktails.mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption1">
+                        <h1>MOCKTAILS & JUICES</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="carousel-item">
+                <a href="Desserts.php">
+                    <video autoplay muted loop style="cursor: pointer;">
+                        <source src="Desserts.mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption1">
+                        <h1>DESSERTS</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="carousel-item">
+                <a href="Savoury Food.php">
+                    <video autoplay muted loop style="cursor: pointer;">
+                        <source src="Savoury1.mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption1">
+                        <h1>SAVOURY FOOD</h1>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#eventsCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#eventsCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("carousel-slide");
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+
+    </script>
+
+
+    <!-- Cafe Menu Section -->
+    <section class="cafe-menu">
+        <h2>Seasonal Additions</h2>
+        <div class="menu-grid">
+            <div class="menu-item" style="cursor: pointer;" onclick="window.location.href='Coffee & Tea.php'">
+                <img src="Pumpkin spice.jpeg" alt="Pumpkin Spice Latte">
+                <div class="menu-text">
+                    <h3>Pumpkin Spice Latte</h3>
+                    <p>A warm drink made with espresso, steamed milk, and pumpkin flavored syrup.</p>
+                </div>
+            </div>
+            <div class="menu-item" style="cursor: pointer;">
+                <img src="Dumpling soup.jpeg" alt="Dumpling Soup" onclick="window.location.href='Savoury Food.php'">
+                <div class="menu-text">
+                    <h3>Dumpling Soup</h3>
+                    <p>Bite-sized doughy dumplings cooked in a flavorful broth.</p>
+                </div>
+            </div>
+            <div class="menu-item" style="cursor: pointer;" onclick="window.location.href='Coffee & Tea.php'">
+                <img src="Cranberry tea 1.jpeg" alt="Cranberry Tea">
+                <div class="menu-text">
+                    <h3>Cranberry Tea</h3>
+                    <p>Tart and tangy, made by steeping dried cranberries in hot water.</p>
+                </div>
+            </div>
+            <div class="menu-item" style="cursor: pointer;" onclick="window.location.href='Desserts.php'">
+                <img src="Cinnamon Roll.jpeg" alt="Cinnamon Rolls">
+                <div class="menu-text">
+                    <h3>Cinnamon Rolls</h3>
+                    <p>Sweet, doughy pastries filled with cinnamon sugar and topped with cream cheese frosting.</p>
+                </div>
+            </div>
+            <div class="menu-item" style="cursor: pointer;" onclick="window.location.href='Desserts.php'">
+                <img src="Carrot Doughnut.jpeg" alt="Carrot Cake Doughnut">
+                <div class="menu-text">
+                    <h3>Carrot Cake Doughnut</h3>
+                    <p>Doughnut shaped cake made with a mixture of grated carrots, raisins, and spices like cinnamon and
+                        nutmeg.</p>
+                </div>
+            </div>
+            <div class="menu-item" style="cursor: pointer;" onclick="window.location.href='Savoury Food.php'">
+                <img src="Tomato Soup.jpeg" alt="Tomato Soup">
+                <div class="menu-text">
+                    <h3>Tomato Soup</h3>
+                    <p>A warm and comforting soup made from simmered tomatoes, blended with cream and seasoned with
+                        fresh basil and oregano.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Check out our Upcoming Events</h2>
+        <button type="button" onclick="window.location.href='index.html#eventsCarousel'">Clcik Here!</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 THE STORY BEHIND</p>
+    </footer>
+
+</body>
+
+</html>

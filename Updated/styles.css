@@ -1,0 +1,160 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f3f7;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #f78ca0, #f9748f, #fd5f00);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#hero button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #ff4747;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+.service {
+    background-color: #ffcccb;
+    padding: 20px;
+    width: 22%;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ff5c5c;
+}
+
+.service p {
+    font-size: 1.2em;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    background-color: #ffa6a6;
+}
+
+.service a {
+    color: #ff4747;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.service a:hover {
+    text-decoration: underline;
+}
+
+/* Events Section */
+#events {
+    background-color: #ffe4b5;
+    padding: 30px;
+    text-align: center;
+}
+
+#events h2 {
+    color: #ff5c5c;
+    font-size: 2.2em;
+}
+
+#events ul {
+    list-style: none;
+    padding: 0;
+}
+
+#events ul li {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #f78ca0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

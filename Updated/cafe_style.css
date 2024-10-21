@@ -1,0 +1,395 @@
+/* Base Styles */
+/* Base Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    font-family: 'Graduate';
+    position: relative;
+    background-image: url("header.jpeg");
+    background-size: cover;
+    background-color: #a3d183;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.372);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 50% opacity */
+    z-index: 1;
+}
+
+header h1,
+nav {
+    position: relative;
+    z-index: 2;
+    /* Keeps the text above the overlay */
+}
+
+header h1 {
+    font-family: 'Averia Serif Libre';
+    margin: 0;
+    font-size: 2.5em;
+    animation: bounceIn 1.5s ease;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 2s ease-in;
+}
+
+nav ul li {
+    font-family: 'Playfair Display';
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+
+/* Menu */
+
+.carousel-container {
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Carousel slide */
+.carousel slide {
+    display: none;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+}
+
+#eventsCarousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #ffe4b5;
+    /* Matches the event section's background */
+    padding: 20px;
+    border-radius: 0px;
+    animation: fadeInUp 2s ease;
+}
+
+/* Navigation buttons*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    transition: 0.6s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent buttons */
+}
+
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*THIS*/
+.carousel-caption1 h1{
+    font-family: 'Abril Fatface';
+    position: absolute;
+    font-size: 10rem;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #29211b;
+    /* Adds a semi-transparent background */
+    padding: 40px;
+    width: 100%;
+    animation: fadeIn 2s ease-in;
+}
+
+.carousel-inner img{
+    width: 100%;
+    /* Ensures images take full width */
+    height: auto;
+    /* Adjust height accordingly */
+    border-radius: 10px;
+}
+
+.carousel-indicators li {
+    list-style-type: none;
+    /* Ensure no list styling is applied */
+}
+
+/* Adjust the height of the carousel */
+.carousel-item {
+    font-family: 'Playfair Display', serif;
+    animation: fadeIn 2s ease-in;
+    height: 500px;
+}
+
+.carousel-front h1{
+    font-family: 'Abril Fatface', serif;
+    font-size: 10rem;
+    display: flex;
+    color:#29211b;
+    animation: fadeIn 2s ease-in;
+    height: 500px;
+    justify-content:center;
+    align-items:center;
+}
+
+.carousel-item img, .carousel-item video {
+    object-fit: cover;
+    width: 110%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: #fff;
+    border-radius: 30px;
+
+    /* Set opacity for the background image */
+}
+
+
+@media (max-width: 768px) {
+    .carousel-caption1 h3 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption1 p {
+        font-size: 1rem;
+    }
+}
+
+/* Base Styles for Hero */
+#hero {
+    position: relative;
+    overflow: hidden;
+    background-color: #ffcccb;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Slides Container */
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 1s ease;
+}
+
+/* Individual Slide */
+.slide {
+    width: 100%;
+    flex: 1 0 100%;
+    padding: 20px;
+    background-color: #ffd700;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#hero button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #ff4747;
+}
+
+
+/* Cafe Menu Section */
+.cafe-menu {
+    font-family: 'Cutive';
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff8dc;
+    animation: fadeIn 2s ease;
+}
+
+.cafe-menu h2 {
+    font-size: 2.2em;
+    color: #ff5c5c;
+    animation: slideInLeft 1.5s ease;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    animation: fadeInUp 1.8s ease;
+}
+
+.menu-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    animation: fadeInUp 2s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+.menu-text {
+    position: absolute;
+    font-family: 'Playfair Display';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    animation: fadeInUp 2s ease;
+}
+
+#events {
+    font-family: 'Playfair Display';
+    text-align: center;
+    background-color: #ffcccb;
+    animation: fadeIn 2s ease-in;
+    padding: 30px;
+}
+
+#events button {
+    background-color: #ff5c5c;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+#events button:hover {
+    background-color: #ff4747;
+}
+
+/* Footer */
+footer {
+    background-color: #f78ca0;
+    font-family: 'Playfair Display';
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    animation: fadeInUp 1.5s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}

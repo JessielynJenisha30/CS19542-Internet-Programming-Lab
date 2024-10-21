@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="adminStyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia Serif Libre">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            overflow-x: hidden;
+            text-align: center;
+            margin-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        h1 {
+            font-family: 'Averia Serif Libre';
+        }
+
+        #admin-buttons button {
+            background-color: #619738;
+            font-family: 'Playfair Display';
+            text-align: center;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+
+        #admin-buttons button:hover {
+            background-color: #4f8625;
+        }
+
+        /* Style for the dropdown button */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            background-color: #619738;
+            /* Green background */
+            color: white;
+            /* White text */
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #4f8625;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show the dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Admin Dashboard</h1>
+    <div id="admin-buttons">
+        <div class="dropdown">
+            <button class="dropdown-btn">Cafe</button>
+            <div class="dropdown-content">
+                <a href="Add cafe.php">New</a>
+                <a href="Edit and Delete Cafe.php">Edit</a>
+                <a href="Edit and Delete Cafe.php">Delete</a>
+            </div>
+        </div>
+        <button onclick="window.location.href='library_admin.php'">Library</button>
+        <button onclick="window.location.href='floral_admin.php'">Floral Shop</button>
+        <button onclick="window.location.href='events_admin.php'">Events</button>
+    </div>
+    </div>
+</body>
+
+</html>
